@@ -194,7 +194,6 @@ function fanPage() {
 function infoPage() {
     ctx.fillStyle = 'black';
     ctx.fillRect(0,0,canvas.width,canvas.height)
-    ctx.fillText("DOOMERCORP INFO", 50, 70);
     typeText(lines6,"dataFiles1",25,5000)
 }
 
