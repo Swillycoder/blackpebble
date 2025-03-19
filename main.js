@@ -110,7 +110,7 @@ function gameLoop() {
         dataFiles3();
     } else if (gameState === "fanPage") {
         fanPage();
-    } else if gameState === "infoPage") {
+    } else if (gameState === "infoPage") {
         infoPage();
     } 
     requestAnimationFrame(gameLoop);
