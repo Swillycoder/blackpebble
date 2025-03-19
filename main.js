@@ -77,6 +77,20 @@ const lines5 = [
     "I DON'T LIKKE SPAM!!!!!!",
 ]
 
+const lines6 = [
+    "DOOMERCORP.COM",
+    "DOOMERCORP.COM",
+    "DOOMERCORP.COM",
+    "DOOMERCORP.COM",
+    "DOOMERCORP.COM",
+    "DOOMERCORP.COM",
+    "DOOMERCORP.COM",
+    "DOOMERCORP.COM",
+    "DOOMERCORP.COM",
+    "DOOMERCORP.COM",
+]
+
+
 let lineIndex = 0;
 let charIndex = 0;
 let gameState = "introScreen";
@@ -96,6 +110,8 @@ function gameLoop() {
         dataFiles3();
     } else if (gameState === "fanPage") {
         fanPage();
+    } else if gameState === "infoPage") {
+        infoPage();
     } 
     requestAnimationFrame(gameLoop);
 }
@@ -172,7 +188,14 @@ function dataFiles3() {
 function fanPage() {
     ctx.fillStyle = 'black';
     ctx.fillRect(0,0,canvas.width,canvas.height)
-    typeText(lines5,"dataFiles1",25,5000)
+    typeText(lines5,"infoPage",25,5000)
+}
+
+function infoPage() {
+    ctx.fillStyle = 'black';
+    ctx.fillRect(0,0,canvas.width,canvas.height)
+    ctx.fillText("DOOMERCORP INFO", 50, 70);
+    typeText(lines6,"dataFiles1",25,5000)
 }
 
 gameLoop();
